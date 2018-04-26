@@ -18,3 +18,25 @@ sudo mv terraform /usr/bin
 ```
 > Note: this version of clusterize was developped and tested with Terraform 0.11.7
 
+To install Ansible:
+```sh
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+```
+
+## Use clusterize
+
+clusterize is a set of scripts that will automate the deployment of a basic Kubernetes cluster using hosts accessible via ssh with root privileges.
+
+Although it is tailored for my specific use case, it's possible to adapt those script with minimum efforts.
+
+## Getting started
+
+```sh
+git clone https://github.com/yanlibert/clusterize
+cd clusterize
+```
+To be continuated...
