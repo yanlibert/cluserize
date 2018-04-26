@@ -22,10 +22,19 @@ list=$(cat ip_list.txt)
 #
 i=1
 #
+touch /tmp/ip_host.txt
+if [ ! -f "/tmp/ip_host.txt" ]
+then
+    touch /tmp/ip_host.txt
+else
+    rm -f /tmp/ip_host.txt
+    touch /tmp/ip_host.txt
+fi
+#
 for machine in $list
 do
     hostname="$(head -$i ./dic/SA_animals.dic | tail -1)"
-    echo "$machine => $hostname"
+    echo "$machine => $hostname" >> /tmp/ip_host.txt
     i=$((i+1))
-    echo $i
 done
+#
