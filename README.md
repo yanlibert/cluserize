@@ -38,5 +38,6 @@ Although it is tailored for my specific use case, it's possible to adapt those s
 ```sh
 git clone https://github.com/yanlibert/clusterize
 cd clusterize
+./clusterize.sh
 ```
 To be continued...
