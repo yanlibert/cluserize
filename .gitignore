@@ -8,3 +8,6 @@
 #Emacs file
 *~
 \#*\#
+
+#list of available hosts
+ip_list.txt
