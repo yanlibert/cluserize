@@ -15,3 +15,17 @@ then
     echo "please, create a list of IP named ip_list.txt to initiate deployment"
     exit 1
 fi
+#
+list=$(cat ip_list.txt)
+#
+# Associate a hostame with the ip
+#
+i=1
+#
+for machine in $list
+do
+    hostname="$(head -$i ./dic/SA_animals.dic | tail -1)"
+    echo "$machine => $hostname"
+    i=$((i+1))
+    echo $i
+done
