@@ -5,7 +5,7 @@
 # Module directory
 .terraform/
 
-#Emacs file
+# Emacs file
 *~
 \#*\#
 
@@ -14,3 +14,11 @@ ip_list.txt
 
 # System specific hosts
 hosts/*
+
+# VM
+output-virtualbox-ovf/*
+
+# Output files
+.vagrant/*
+packer_cache/*
+custombox/*
