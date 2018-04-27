@@ -9,5 +9,8 @@
 *~
 \#*\#
 
-#list of available hosts
+# List of available hosts
 ip_list.txt
+
+# System specific hosts
+hosts/*
