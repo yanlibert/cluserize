@@ -98,7 +98,7 @@ vagrant package ubuntukube --output ubuntukube.box
 for machine in $ip_list
 do
     scp ubuntukube.box ubuntu@$machine:~/.
-    cat Vagrantfile | sed s/placeholder/"${host_names[$machine]}"/g > /tmp/Vagrantfile
+    cat VagrantTemplate | sed s/placeholder/"${host_names[$machine]}"/g > /tmp/Vagrantfile
     scp /tmp/Vagrantfile ubuntu@$machine:~/.
     ssh ubuntu@$machine vagrant box add ubuntukube.box --name ubuntukube
 done
