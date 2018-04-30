@@ -23,6 +23,7 @@ Vagrant
 wget https://releases.hashicorp.com/vagrant/2.0.4/vagrant_2.0.4_x86_64.deb
 sudo dpkg -i vagrant_2.0.4_x86_64.deb
 ```
+On the node machine, you should also have Vagrant installed and an account named ubuntu with a ssh key pair set up and root access.
 
 ## Use clusterize
 
