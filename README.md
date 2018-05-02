@@ -47,4 +47,4 @@ update-rc.d vagrant-boxes defaults 99 01
 ```
 Number 99 is the sequence number and should be larger than (in my case Virtualbox number 20, which by the way is the default on Debian distros). The second number is the sequence when shutting down the computer. So, it might be good to do first of all.
 
-All the credit to the script vagrant-boxes goes to Olle Gustafsson, please visit his website for more information. 
+All the credit to the script vagrant-boxes goes to Olle Gustafsson, please visit his website for more information [https://www.ollegustafsson.com/en/vagrant-suspend-resume/](https://www.ollegustafsson.com/en/vagrant-suspend-resume/)
