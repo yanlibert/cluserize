@@ -97,8 +97,14 @@ vagrant package ubuntukube --output ubuntukube.box
 #
 for machine in $ip_list
 do
-    scp ubuntukube.box ubuntu@$machine:~/.
+    #scp ubuntukube.box ubuntu@$machine:~/.
+    scp vagrant-boxes ubuntu@$machine:~/.
+    ssh ubuntu@$machine sudo mv vagrant-boxes /etc/init.d/.
+    ssh ubuntu@$machine sudo update-rc.d vagrant-boxes defaults 99 01
     cat VagrantTemplate | sed s/placeholder/"${host_names[$machine]}"/g > /tmp/Vagrantfile
     scp /tmp/Vagrantfile ubuntu@$machine:~/.
-    ssh ubuntu@$machine vagrant box add ubuntukube.box --name ubuntukube
+    #ssh ubuntu@$machine vagrant box add ubuntukube.box --name ubuntukube
 done
+#
+# 
+#
